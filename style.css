@@ -1,0 +1,20 @@
+body {
+  background-color: #343a40;
+  color: aliceblue;
+}
+
+h4, a{
+  color: yellow;
+}
+
+.code {
+  color: #7ec699;
+}
+
+.indent1 {
+  text-indent: 20px;
+}
+
+.indent2 {
+  text-indent: 40px;
+}
