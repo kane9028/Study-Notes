@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>HTML-FORM</title>
+</head>
+<body>
+  <a href="index.html"><h1>HOME</h1></a>
+
+  <h2>FORM 表单</h2>
+  <textarea rows="18" class="code" readonly>
+<form action="example.com/path" method="post">
+  <div>
+    <label for="first_name">First Name:</label>
+    <input type="text" name="first_name" id="first_name" placeholder="Bob...">
+  </div>
+  <fieldset>
+    <legend>Login Information</legend>
+    <div>
+      <label for="user_email">Email Address:</label>
+      <input type="email" id="user_email" name="email" placeholder="you@example.com">
+    </div>
+    <div>
+      <label for="user_password">Password:</label>
+      <input type="password" id="user_password" name="password">
+    </div>
+  </fieldset>
+<form>
+  </textarea>
+  <div>Example</div>
+  <form action="example.com/path" method="post">
+    <div>
+      <label for="first_name">First Name:</label>
+      <input type="text" name="first_name" id="first_name" placeholder="Bob...">
+    </div>
+    <fieldset>
+      <legend>Login Information</legend>
+      <div>
+        <label for="user_email">Email Address:</label>
+        <input type="email" id="user_email" name="email" placeholder="you@example.com">
+      </div>
+      <div>
+        <label for="user_password">Password:</label>
+        <input type="password" id="user_password" name="password">
+      </div>
+    </fieldset>
+  <form>
+  <p>fieldset: 字段集。</p>
+  <p>action: 告诉表单它应该将其数据发送到哪里进行处理。</p>
+  <p>method: 请求方法。常用get，post。</p>
+  <p>for: 与标签id属性具有相同值。</p>
+  <p>name: 输入的变量名。</p>
+  <p>type: email-方便输入email。password-显示为*。number-仅接受数字。date-方便日期输入。</p>
+
+  <h2>TEXT AREA 文本区</h2>
+  <textarea class="code" readonly>
+<textarea name="" id="" cols="30" rows="5">This is textarea.</textarea>
+  </textarea>
+  <div>Example</div>
+  <textarea>This is textarea.</textarea>
+  
+  <h2>SELECT EVELMENT 选择元素</h2>
+  <h4>Select Dropdown 选择下拉菜单</h4>
+  <textarea class="code" rows="14" readonly>
+<select name="car-fashion">
+  <option value="mercedes">Mercedes</option>
+  <option value="tesla">Tesla</option>
+  <option value="bmw">BMW</option>
+  <optgroup label="Clothing">
+    <option value="t_shirt">T-Shirts</option>
+    <option value="sweater">Sweaters</option>
+  </optgroup>
+  <optgroup label="Foot Wear">
+    <option value="boots">Boots</option>
+    <option value="sandals">Sandals</option>
+  </optgroup>
+</select>
+  </textarea>
+  <div>Example</div>
+  <select name="car-fashion">
+    <option value="mercedes">Mercedes</option>
+    <option value="tesla">Tesla</option>
+    <option value="bmw">BMW</option>
+    <optgroup label="Clothing">
+      <option value="t_shirt">T-Shirts</option>
+      <option value="sweater">Sweaters</option>
+    </optgroup>
+    <optgroup label="Foot Wear">
+      <option value="boots">Boots</option>
+      <option value="sandals">Sandals</option>
+    </optgroup>
+  </select>
+  <p>name: 变量名</p>
+  <p>value: 变量值</p>
+
+  <h4>Radio Buttons 单选按钮</h4>
+  <textarea class="code" rows="14" readonly>
+<div>
+  <input type="radio" id="child" name="ticket_type" value="child" checked>
+  <label for="child">Child</label>
+</div>
+<div>
+  <input type="radio" id="adult" name="ticket_type" value="adult">
+  <label for="adult">Adult</label>
+</div>
+<div>
+  <input type="radio" id="senior" name="ticket_type" value="senior">
+  <label for="senior">Senior</label>
+</div>
+  </textarea>
+  <div>Example</div>
+  <div>
+    <input type="radio" id="child" name="ticket_type" value="child" checked>
+    <label for="child">Child</label>
+  </div>
+  <div>
+    <input type="radio" id="adult" name="ticket_type" value="adult">
+    <label for="adult">Adult</label>
+  </div>
+  <div>
+    <input type="radio" id="senior" name="ticket_type" value="senior">
+    <label for="senior">Senior</label>
+  </div>
+
+  <h4>Checkboxes 复选框</h4>
+  <textarea class="code" rows="17" readonly>
+<fieldset>
+  <legend>Choose all you like!</legend>
+  <div>
+    <input type="checkbox" id="onions" name="topping" value="onions">
+    <label for="onions">Onions</label>
+  </div>
+  <div>
+    <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+    <label for="pepperoni">Pepperoni</label>
+  </div>
+  <div>
+    <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+    <label for="mushrooms">Mushrooms</label>
+  </div>
+</fieldset>
+  </textarea>
+  <div>Example</div>
+  <fieldset>
+    <legend>Choose all you like!</legend>
+    <div>
+      <input type="checkbox" id="onions" name="topping" value="onions">
+      <label for="onions">Onions</label>
+    </div>
+    <div>
+      <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+      <label for="pepperoni">Pepperoni</label>
+    </div>
+    <div>
+      <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+      <label for="mushrooms">Mushrooms</label>
+    </div>
+  </fieldset>
+  <p>去掉value，可以当作真假选择。Return true/false.</p>
+
+  <h2>BUTTON 按钮</h2>
+  <textarea class="code" rows="4" readonly>
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+<button type="button">Click to Toggle</button>
+  </textarea>
+  <div>Example</div>
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+  <button type="button">Click to Toggle</button>
+  <p>type: 应始终指定属性以避免提交表单时产生不必要的影响。</p>
+  
+  
+</body>
+</html>
