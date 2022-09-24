@@ -54,30 +54,30 @@
   <p>for: 与标签id属性具有相同值。</p>
   <p>name: 输入的变量名。</p>
   <p>type: email-方便输入email。password-显示为*。number-仅接受数字。date-方便日期输入。</p>
-
+  
   <h2>TEXT AREA 文本区</h2>
   <textarea class="code" readonly>
-<textarea name="" id="" cols="30" rows="5">This is textarea.</textarea>
+    <textarea name="" id="" cols="30" rows="5" minlength="3">This is textarea.</textarea>
   </textarea>
   <div>Example</div>
-  <textarea>This is textarea.</textarea>
+  <textarea cols="30" rows="5" minlength="3">This is textarea.</textarea>
   
   <h2>SELECT EVELMENT 选择元素</h2>
   <h4>Select Dropdown 选择下拉菜单</h4>
   <textarea class="code" rows="14" readonly>
-<select name="car-fashion">
-  <option value="mercedes">Mercedes</option>
-  <option value="tesla">Tesla</option>
-  <option value="bmw">BMW</option>
-  <optgroup label="Clothing">
-    <option value="t_shirt">T-Shirts</option>
-    <option value="sweater">Sweaters</option>
-  </optgroup>
-  <optgroup label="Foot Wear">
-    <option value="boots">Boots</option>
-    <option value="sandals">Sandals</option>
-  </optgroup>
-</select>
+    <select name="car-fashion">
+      <option value="mercedes">Mercedes</option>
+      <option value="tesla">Tesla</option>
+      <option value="bmw">BMW</option>
+      <optgroup label="Clothing">
+        <option value="t_shirt">T-Shirts</option>
+        <option value="sweater">Sweaters</option>
+      </optgroup>
+      <optgroup label="Foot Wear">
+        <option value="boots">Boots</option>
+        <option value="sandals">Sandals</option>
+      </optgroup>
+    </select>
   </textarea>
   <div>Example</div>
   <select name="car-fashion">
@@ -95,21 +95,21 @@
   </select>
   <p>name: 变量名</p>
   <p>value: 变量值</p>
-
+  
   <h4>Radio Buttons 单选按钮</h4>
   <textarea class="code" rows="14" readonly>
-<div>
-  <input type="radio" id="child" name="ticket_type" value="child" checked>
-  <label for="child">Child</label>
-</div>
-<div>
-  <input type="radio" id="adult" name="ticket_type" value="adult">
-  <label for="adult">Adult</label>
-</div>
-<div>
-  <input type="radio" id="senior" name="ticket_type" value="senior">
-  <label for="senior">Senior</label>
-</div>
+    <div>
+      <input type="radio" id="child" name="ticket_type" value="child" checked>
+      <label for="child">Child</label>
+    </div>
+    <div>
+      <input type="radio" id="adult" name="ticket_type" value="adult">
+      <label for="adult">Adult</label>
+    </div>
+    <div>
+      <input type="radio" id="senior" name="ticket_type" value="senior">
+      <label for="senior">Senior</label>
+    </div>
   </textarea>
   <div>Example</div>
   <div>
@@ -124,24 +124,24 @@
     <input type="radio" id="senior" name="ticket_type" value="senior">
     <label for="senior">Senior</label>
   </div>
-
+  
   <h4>Checkboxes 复选框</h4>
   <textarea class="code" rows="17" readonly>
-<fieldset>
-  <legend>Choose all you like!</legend>
-  <div>
-    <input type="checkbox" id="onions" name="topping" value="onions">
-    <label for="onions">Onions</label>
-  </div>
-  <div>
-    <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
-    <label for="pepperoni">Pepperoni</label>
-  </div>
-  <div>
-    <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
-    <label for="mushrooms">Mushrooms</label>
-  </div>
-</fieldset>
+    <fieldset>
+      <legend>Choose all you like!</legend>
+      <div>
+        <input type="checkbox" id="onions" name="topping" value="onions">
+        <label for="onions">Onions</label>
+      </div>
+      <div>
+        <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+        <label for="pepperoni">Pepperoni</label>
+      </div>
+      <div>
+        <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+        <label for="mushrooms">Mushrooms</label>
+      </div>
+    </fieldset>
   </textarea>
   <div>Example</div>
   <fieldset>
@@ -160,12 +160,12 @@
     </div>
   </fieldset>
   <p>去掉value，可以当作真假选择。Return true/false.</p>
-
+  
   <h2>BUTTON 按钮</h2>
   <textarea class="code" rows="4" readonly>
-<button type="submit">Submit</button>
-<button type="reset">Reset</button>
-<button type="button">Click to Toggle</button>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <button type="button">Click to Toggle</button>
   </textarea>
   <div>Example</div>
   <button type="submit">Submit</button>
@@ -173,6 +173,51 @@
   <button type="button">Click to Toggle</button>
   <p>type: 应始终指定属性以避免提交表单时产生不必要的影响。</p>
   
+  <h2>FORM VALIDATION 表单验证</h2>
+  <p>required: 必填。</p>
+  <p>minlength/maxlength: 最小/最大长度。</p>
+  <p>min/max: 仅适用于基于数字的表单控件，例如数字、日期和时间输入。</p>
+
+  <h4>Pattern 模式验证</h4>
+  <textarea class="code" rows="11" readonly>
+<form action="#" method="get">
+  <div>
+    <label for="zip_code">Postal / Zip Code:</label>
+  </div>
+  <input type="text" id="zip_code" name="zip_code" pattern="(\d{5}([\-]\d{4})?)" title="Please enter a valid zip code, example: 65251" placeholder="65251" required>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+  </textarea>
+  <form action="#" method="get">
+    <div>
+      <label for="zip_code">Postal / Zip Code:</label>
+    </div>
+    <input type="text" id="zip_code" name="zip_code" pattern="(\d{5}([\-]\d{4})?)" title="Please enter a valid zip code, example: 65251" placeholder="65251" required>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+  <p>pattern: 只能用于input元素，以正则表达式作为值。一些输入元素已经验证了与特定模式匹配的数据。例如，电子邮件输入字段将确保输入有效的电子邮件，并且 url 输入元素将检查以确保 URL 以 http 或 https 开头</p>
   
+  <h2>STYLING VALIDATIONS 样式验证</h2>
+  <textarea class="code" rows="11" readonly>
+input {
+  border: 2px solid #000;
+  margin-bottom: 15px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
+}
+  </textarea>
+  <p>我们针对任何有效输入并给它们一个绿色边框。我们的电子邮件和 URL 输入最初有一个绿色边框，因为它们不是必填字段并且是有效的。当一个字段无效时，我们给它一个红色边框。尝试输入无效的电子邮件地址和 URL 以查看其外观。</p>
 </body>
 </html>
