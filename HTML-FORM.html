@@ -48,6 +48,7 @@
       </div>
     </fieldset>
   <form>
+  <p>确保使用form元素，否则无法提交。</p>
   <p>fieldset: 字段集。</p>
   <p>action: 告诉表单它应该将其数据发送到哪里进行处理。</p>
   <p>method: 请求方法。常用get，post。</p>
@@ -209,13 +210,14 @@ input {
   padding: 5px;
   border-radius: 5px;
 }
-
 input:invalid {
   border-color: red;
 }
-
 input:valid {
   border-color: green;
+}
+input:focus {
+  background-color: rgb(173, 234, 255);
 }
   </textarea>
   <p>我们针对任何有效输入并给它们一个绿色边框。我们的电子邮件和 URL 输入最初有一个绿色边框，因为它们不是必填字段并且是有效的。当一个字段无效时，我们给它一个红色边框。尝试输入无效的电子邮件地址和 URL 以查看其外观。</p>
