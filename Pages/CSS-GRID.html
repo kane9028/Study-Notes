@@ -5,10 +5,54 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../Styles/style-CSS-GRID.css">
   <title>Document</title>
 </head>
 <body>
   <a href="../index.html"><h1>HOME</h1></a>
+
+  <h2>SETTING UP A GRID 设置网格</h2>
+  <textarea rows="14" class="code" readonly>
+.container {
+  display: grid;
+  grid-template-columns: 100px 50px 50px;
+  grid-template-rows: 50px 20px;
+  column-gap: 10px;
+}
+OR
+.container {
+  display: grid;
+  grid-template: 50px 20px/ 100px 50px 50px;<!-- row/column -->
+  column-gap: 10px;
+}
+  </textarea>
+  <div>Example</div>
+  <div class="container1">
+    <div>item1</div>
+    <div>item2</div>
+    <div>item3</div>
+    <div>item4</div>
+  </div>
+
+  <h2>Explicit vs Implicit Grid 显式与隐式网格</h2>
+  <textarea rows="7" class="code" readonly>
+.container2 {
+  display: grid;
+  grid-template: 50px 50px/ 50px 50px;
+  grid-auto-rows: 20px;
+  gap: 10px 0px;
+}
+  </textarea>
+  <div>Example</div>
+  <div class="container2">
+    <div>item1</div>
+    <div>item2</div>
+    <div>item3</div>
+    <div>item4</div>
+    <div>item5</div>
+    <div>item6</div>
+    <div>item7</div>
+  </div>
   
 </body>
 </html>

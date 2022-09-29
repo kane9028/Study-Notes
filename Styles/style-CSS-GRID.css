@@ -1,0 +1,16 @@
+.container1 {
+  display: grid;
+  grid-template: 50px 20px/ 100px 50px 50px;
+  column-gap: 10px;
+}
+
+.container2 {
+  display: grid;
+  grid-template: 50px 50px/ 50px 50px;
+  grid-auto-rows: 20px;
+  gap: 10px 0px;
+}
+
+.container2 div, .container1 div{
+  border: 1px solid white;
+}
