@@ -53,6 +53,126 @@ OR
     <div>item6</div>
     <div>item7</div>
   </div>
+
+  <h2>REVIEWING TRACKS</h2>
+  <textarea rows="17" class="code" readonly>
+.container {
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
+}
+.item {
+  background-color: orange;
+  border: 1px solid black;
+  text-align: center;
+}
+.first-row {
+  background-color: pink;
+}
+.last-column {
+  background-color: lightblue;
+}
+  </textarea>
+  <div>Example</div>
+  <div class="container3">
+    <div class="item first-row">A</div>
+    <div class="item first-row">B</div>
+    <div class="item first-row last-column">C</div>
+    <div class="item">D</div>
+    <div class="item">E</div>
+    <div class="item last-column">F</div>
+    <div class="item">G</div>
+    <div class="item">H</div>
+    <div class="item last-column">I</div>
+  </div>
+
+  <h2>POSITIONING 定位</h2>
+  <textarea rows="36" class="code" readonly>
+.container4 {
+  display: inline-grid;
+  grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
+  background-color: lightblue; 
+}
+.container4 .room {
+  border: 1px solid;
+  font-size: 60%;
+  text-align: center;
+}
+.container4 #living-room {
+  grid-area: 1/1/3/6;
+}
+.container4 #kitchen {
+  grid-area: 3/4/6/6;
+}
+.container4 #bedroom {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+.container4 #bathroom {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
+.container4 #closet {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+  </textarea>
+  <div>Example</div>
+  <div class="container4">
+    <div class="room" id="living-room">Living Room</div>
+    <div class="room" id="kitchen">Kitchen</div>
+    <div class="room" id="bedroom">Bedroom</div>
+    <div class="room" id="bathroom">Bathroom</div>
+    <div class="room" id="closet">Closet</div>
+  </div>
   
+  <textarea rows="33" class="code" readonly>
+.container5 {
+  display: inline-grid;
+  grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
+  background-color: lightblue; 
+  grid-template-areas:
+    "living-room living-room living-room living-room living-room"
+    "living-room living-room living-room living-room living-room"
+    "bedroom bedroom bathroom kitchen kitchen"
+    "bedroom bedroom bathroom kitchen kitchen"
+    "closet closet . . ."    
+}
+.container5 .room {
+  border: 1px solid;
+  font-size: 50%;
+  text-align: center;
+}
+.container5 #living-room {
+    grid-area:  living-room;
+}
+.container5 #kitchen {
+  grid-area: kitchen;
+}
+.container5 #bedroom {
+  grid-area: bedroom;
+}
+.container5 #bathroom {
+  grid-area: bathroom;
+}
+.container5 #closet {
+  grid-area: closet;
+}
+  </textarea>
+  <div>Example</div>
+  <div class="container5">
+    <div class="room" id="living-room">Living Room</div>
+    <div class="room" id="kitchen">Kitchen</div>
+    <div class="room" id="bedroom">Bedroom</div>
+    <div class="room" id="bathroom">Bathroom</div>
+    <div class="room" id="closet">Closet</div>
+  </div>
+
 </body>
 </html>
